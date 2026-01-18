@@ -6,25 +6,25 @@ This program simulates the real-life gravity of massive objects.
 
 To use this program, you'll need a Python 3 virtual environment with the Pygame and Numpy libraries.
 
-´´´
+```
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install pygame numpy
-´´´
+```
 
 ## Mathematical implementations
 
 This program uses the Newtonian model of gravity.
 
-Originally, Newton's formula for gravity was ´-G*(m1*m2)/r²´, but we need to multiply that by the displacement vector to get the force vector. The formula for that is ´(p1-p2)/r´. I simplified the formula to ´-G*m1*m2*(p1-p2)/r³´, which appears on Wikipedia's page for Newton's universal law of gravitation. Finally, I simplified the m1 term with the mass that appears in the "force to acceleration" formula, also created by Newton (f/m=a), giving the following calculations: 
+Originally, Newton's formula for gravity was `-G*(m1*m2)/r²`, but we need to multiply that by the displacement vector to get the force vector. The formula for that is `(p1-p2)/r`. I simplified the formula to `-G*m1*m2*(p1-p2)/r³`, which appears on Wikipedia's page for Newton's universal law of gravitation. Finally, I simplified the m1 term with the mass that appears in the "force to acceleration" formula, also created by Newton (f/m=a), giving the following calculations: 
 
-´´´python
+```python
 f = 0
 for object in objects_in_scene:
 f -= G * object.mass * (self.position - object.position) / distance(self.position, object.position)**3
 self.velocity = self.velocity + f
 self.position = self.position + self.velocity
-´´´
+```
 
 This simulation was made using differential equations, which made the simulation less than completely realistic but able to simulate more than two objects (because humanity has not yet solved the three-body problem). However, it's realistic enough to be a cool project to show in a physics class.
 
