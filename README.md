@@ -21,9 +21,9 @@ Originally, Newton's formula for gravity was `-G*(m1*m2)/r²`, but we need to mu
 ```python
 f = 0
 for object in objects_in_scene:
-f -= G * object.mass * (self.position - object.position) / distance(self.position, object.position)**3
-self.velocity = self.velocity + f
-self.position = self.position + self.velocity
+  f -= G * object.mass * (self.position - object.position) / distance(self.position, object.position)**3
+  self.velocity = self.velocity + f
+  self.position = self.position + self.velocity
 ```
 
 This simulation was made using differential equations, which made the simulation less than completely realistic but able to simulate more than two objects (because humanity has not yet solved the three-body problem). However, it's realistic enough to be a cool project to show in a physics class.
