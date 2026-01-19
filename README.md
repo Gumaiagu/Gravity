@@ -2,6 +2,8 @@
 
 This program simulates the real-life gravity of massive objects.
 
+![Preview of the program](./media/preview.gif)
+
 ## Executing
 
 To use this program, you'll need a Python 3 virtual environment with the Pygame and Numpy libraries.
