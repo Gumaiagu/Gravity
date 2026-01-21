@@ -1,0 +1,9 @@
+radius,x_position,y_position,x_velocity,y_velocity,mass,hex_color,name
+3,0,0,0,0,1000,#FFFFFF,Sun
+2,2000,0,.1,-1.3,0.00001,#FF0000,Mercury
+2,3000,0,-.1,1,0.0001,#00FF00,Venus
+2,4000,0,-.1,1,0.0005,#0000FF,Earth
+2,5000,0,-.1,1,0.0005,#FFFF00,Mars
+3,6000,0,-.1,1,0.001,#00FFFF,Jupter
+4,7000,0,-.1,1,5,#FF00FF,Saturn
+5,-10000,0,1,.4,50,#AAAAAA,Uranus
